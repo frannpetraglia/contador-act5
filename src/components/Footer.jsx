@@ -4,43 +4,47 @@ import { TiSocialInstagram } from "react-icons/ti";
 import { TiSocialFacebookCircular } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
 import { Box } from '@chakra-ui/react'
-
+import { Flex, Spacer } from '@chakra-ui/react'
 function Footer(){
     return(
-        <>
-            <Box bgGradient='linear(to-l, #234d41, #569586)' w='100%' p={30}>
-                <Box as='label' p={5}                            
+        
+            <Flex minWidth='max-content' alignItems='center' gap={['0','2']} bgGradient='linear(to-l, #234d41, #569586)' p={['2','30']}>
+                <Box as='label' p={['0','5']}                            
                     _hover={{
                     color:'#f2f0eb',
+                    transition: '300ms'
                 }}
                 >Aplicacion Contador
                 </Box>
-                <Box as='label'p={5}
+                <Spacer />
+                <Box as='label'p={['0','5']}  
                     _hover={{
                         color:'#f2f0eb',
+                        transition: '300ms'
                     }}
                 >Franco Petraglia</Box>
+                <Spacer />
                 <IconButton
                     colorScheme='pink'
                     aria-label='Call Segun'
-                    size='lg'
+                    size={['xs','lg']}
                     icon={<TiSocialInstagram />}
                     
                 />
                 <IconButton
                     colorScheme='facebook'
                     aria-label='Call Segun'
-                    size='lg'
+                    size={['xs','lg']}
                     icon={<TiSocialFacebookCircular />}
                 />
                 <IconButton
                     colorScheme='twitter'
                     aria-label='Call Segun'
-                    size='lg'
+                    size={['xs','lg']}
                     icon={<TiSocialTwitter />}
                 />        
-            </Box> 
-        </>
+            </Flex> 
+        
     )
 }
 
